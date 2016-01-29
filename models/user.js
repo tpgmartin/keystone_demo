@@ -10,4 +10,6 @@ User.add({
   canAccessKeystone: { type: Boolean, initial: true }
 });
 
+User.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
+
 User.register();

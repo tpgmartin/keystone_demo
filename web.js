@@ -5,7 +5,7 @@ keystone.init({
   'name': 'My Project',
   
   'favicon': 'public/favicon.ico',
-  'less': 'public',
+  'sass': 'public',
   'static': ['public'],
   
   'views': 'templates/views',
@@ -21,7 +21,7 @@ keystone.init({
   
 });
 
-require('./models');
+keystone.import('models')
 
 keystone.set('routes', require('./routes'));
 

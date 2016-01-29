@@ -30,4 +30,6 @@ var routes = {
 // Bind routes
 exports = module.exports = function (app) {
   app.get('/', routes.views.index);
+  app.get('/blog', routes.views.blog);
+  app.get('/blog/post/:post', routes.views.post);
 }
